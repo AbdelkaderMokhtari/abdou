@@ -92,7 +92,7 @@ section{
 }
 
 #moon, #sun {
-    display: inline;
+    display: none;
 }
 
 #menu-icon {
