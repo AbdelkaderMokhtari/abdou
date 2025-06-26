@@ -3,6 +3,47 @@ let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 let navLinks = document.querySelectorAll('header nav a');
 
+
+let change = document.getElementById('e-change');
+let moon = document.getElementById('moon');
+let sun = document.getElementById('sun');
+let body = document.body;
+
+console.log(body.classList);
+
+// Check saved theme
+if (localStorage.getItem("mode") === "light") {
+    body.classList.add("light-mode");
+    moon.style.display = "none";
+    sun.style.display = "inline";
+} else {
+    moon.style.display = "inline";
+    sun.style.display = "none";
+}
+
+change.onclick = () => {
+    body.classList.toggle("light-mode");
+
+    if (body.classList.contains("light-mode")) {
+        moon.style.display = "none";
+        sun.style.display = "inline";
+        localStorage.setItem("mode", "light");
+    } else {
+        moon.style.display = "inline";
+        sun.style.display = "none";
+        localStorage.setItem("mode", "dark");
+    }
+};
+
+
+
+
+
+
+
+
+
+
 // Toggle the navbar
 menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
@@ -51,11 +92,11 @@ ScrollReveal({
     delay: 200
 });
 
-ScrollReveal().reveal('.home-content, .heading, .another', { origin: 'top' });
-ScrollReveal().reveal('.home-img, services-container, portfolio-box, contact form', { origin: 
+ScrollReveal().reveal('.home-content, .heading, .another, .about-image', { origin: 'top' });
+ScrollReveal().reveal('.home-img, services-container, portfolio-box, contact form, .paragraph_about, .footer', { origin: 
 'bottom' });
-ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
-ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
+ScrollReveal().reveal('.home-content h1, .about-img, .skills', { origin: 'left' });
+ScrollReveal().reveal('.home-content p, .about-content, .radial-bar', { origin: 'right' });
 
 // typed js
 
