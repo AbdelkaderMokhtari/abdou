@@ -18,10 +18,12 @@
     --main-color: #3B82F6;
 }
 
+
 body.light-mode {
     --bg-color: #ffffff;
     --second-bg-color: #f0f0f0;
     --text-color: #1f242d;
+  --main-color: #3B82F6; /* هذا ما يتغيرش، يبقى نفسه */
 }
 
 html{
