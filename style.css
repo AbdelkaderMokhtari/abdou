@@ -11,22 +11,32 @@
     font-family: 'Poppins', sans-serif ;
 }
 
-:root{
+:root {
     --bg-color: #1f242d;
     --second-bg-color: #323946;
     --text-color: #fff;
     --main-color: #3B82F6;
 }
 
+
+body.light-mode {
+    --bg-color: #ffffff;
+    --second-bg-color: #f0f0f0;
+    --text-color: #1f242d;
+}
+
+
 html{
     font-size: 62.5%;
     overflow-x: hidden;
 }
 
-body{
-    background: var(--bg-color);
+body {
+    background-color: var(--bg-color);
     color: var(--text-color);
+    transition: 0.3s ease;
 }
+
 
 section{
     background: var(--bg-color);
@@ -67,6 +77,22 @@ section{
 }
 .navbar a:hover{
     color: var(--main-color);
+}
+
+.e-change {
+    display: inline;
+    padding: 10px;
+    margin-left: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.e-change i {
+    font-size: 18px;
+}
+
+#moon, #sun {
+    display: inline;
 }
 
 #menu-icon {
@@ -147,32 +173,41 @@ span{
     box-shadow: 0 0 1rem var(--main-color);
 }
 
-.btn-one{
+.btn{
     display: inline-block;
-    padding: 1rem 2.8rem;
+    padding: 1.2rem 2.8rem;
     background: var(--main-color);
     border-radius: 4rem;
     box-shadow: 0 0 1rem var(--second-bg-color);
     letter-spacing: .1rem;
-    font-weight: 600;
-    transition: .5s ease;
-}
-
-.btn {
-    display: inline-block;
-    padding: 1rem 2.8rem;
-    background: var(--main-color);
-    border-radius: 4rem;
-    box-shadow: 0 0 1rem var(--second-bg-color);
-    letter-spacing: .1rem;
-    font-weight: 600;
+    font-weight: 700;
     transition: .5s ease;
     margin-top: 25px;
 }
 
 
 .btn:hover{
-    box-shadow: none;
+    background-color: var(--second-bg-color);
+    border: 3px solid var(--main-color);
+}
+
+.btn-one{
+    display: inline-block;
+    padding: 1.2rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    color: var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--second-bg-color);
+    letter-spacing: .1rem;
+    font-weight: 700;
+    transition: .5s ease;
+}
+
+
+.btn-one:hover{
+    color: var(--main-color);
+    background-color: var(--second-bg-color);
+    border: 3px solid var(--main-color);
 }
 
 .about{
@@ -197,7 +232,7 @@ h2.heading.another{
     text-align: center;
     font-size: 4.5rem;
     margin: 0px 340px 20px 0px;
-    text-decoration: underline;
+    text-decoration: none;
 
 }
 
@@ -325,6 +360,12 @@ h2.heading.another{
     height: 5rem;
     background: var(--text-color);
     border-radius: 50%;
+    transition: 0.3s;
+}
+
+.portfolio-layer a:hover{
+    background: var(--main-color);
+    border: 1px solid var(--text-color);
 }
 
 .portfolio-layer a i{
